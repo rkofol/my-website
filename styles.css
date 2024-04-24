@@ -1,0 +1,45 @@
+:root {
+    --header-color: rgb(2, 82, 58);
+}
+
+/* Styling for Headers */
+h1, h2 {
+    font-variant: small-caps;
+    color: var(--header-color);
+}
+
+/* Styling for Body */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+
+/* Styling for Key Artists List */
+.artist {
+    font-size: 115%;
+
+}
+
+.artist::first-letter {
+    font-size: larger;
+}
+
+/* Img */
+img {
+    float: right;
+    margin-right: 1em;
+}
+
+/* Footer */
+footer {
+    clear: both;
+}
+
+
+main em {
+    color: rgb(92, 79, 4);
+    font-size: larger;
+}
