@@ -1,9 +1,10 @@
 :root {
-    --header-color: rgb(2, 82, 58);
+    --header-color: #02523a;
 }
 
 /* Styling for Headers */
-h1, h2 {
+h1,
+h2 {
     font-variant: small-caps;
     color: var(--header-color);
 }
@@ -28,18 +29,26 @@ body {
 }
 
 /* Img */
-img {
-    float: right;
-    margin-right: 1em;
+ 
+main em {
+    color: #485c02;
+    font-size: larger;
+}
+
+/* Styling for Artists Page */
+article {
+    column-count: 3;
+    column-gap: 35px;
+    column-rule: 2px solid #485c02;
 }
 
 /* Footer */
-footer {
+footer p {
+    text-align: center;
+    padding: 1em 0;
+    border-top: 3px solid #02523a;
+    border-bottom: 3px solid #02523a;
+    background-color: #02523a;
+    color: white;
     clear: both;
-}
-
-
-main em {
-    color: rgb(92, 79, 4);
-    font-size: larger;
 }
