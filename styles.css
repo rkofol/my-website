@@ -1,60 +1,96 @@
 :root {
-    --header-color: #02523a;
+    --main-color: #02523a;
 }
 
 /* Styling for Headers */
 h1,
 h2 {
     font-variant: small-caps;
-    color: var(--header-color);
+    color: var(--main-color);
 }
 
-/* Styling for Body */
 
+/* Styling for Body */
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    margin-left: 2em;
-    margin-right: 2em;
+    padding: 1em;
+    width: 80%;
+    margin: auto;
     background-color: #fffff9;
 }
 
-/* Styling for Key Artists List */
-.artist {
+main em {
+    font-size: larger;
+}
+
+.artist,
+.character {
     font-size: 115%;
 
 }
 
-.artist::first-letter {
-    font-size: larger;
-}
-
+/* Styling for Key Artists List */
 #key-artists {
     border: 2px solid #02523a;
-    background-color:#e0e9c2;
-    float:left;
+    background-color: #e0e9c2;
+    float: left;
     padding: .5em 3em 2em 3em;
-    
+    width: 40%;
 }
 
-/* Front Page Img */
-img {
-   float:right;
-    padding: 2em 5em;
-} 
-
-
-main em {
-    color: #4F6F52;
-    font-size: larger;
+ul#key-artists {
+    list-style-image: url("images/brush.png");
 }
 
+/* Styling for Characteristics List */
+#characteristics {
+    border: 2px solid #02523a;
+    background-color: #e0e9c2;
+    float: left;
+    padding: .5em 3em 2em 3em;
+    width: 40%;
+    clear: left;
+
+}
+
+
+#credit {
+    float: right;
+    clear: right;
+}
+
+/* Images */
+section img {
+    float: right;
+    padding: 2em 0em .5em 0em;
+    width: 40%;
+    min-width: 300px;
+    clear: right;
+}
+
+
+/* Go back and use to fix artists pics */
+
+.portraits img {
+    padding: 2em 2em 0 2.5em;
+    width: 80%;
+    min-width: 200px;
+}
+
+br {
+    clear: both;
+}
 
 /* Styling for Artists Page */
 article {
     column-count: 3;
     column-gap: 35px;
-    column-rule: 2px solid #4F6F52;
+    column-rule: 2.25px solid #4F6F52;
+}
+
+.top {
+    clear: both;
 }
 
 /* Footer */
@@ -63,8 +99,97 @@ footer p {
     padding: 1em 0;
     border-top: 2px solid #02523a;
     border-bottom: 2px solid #02523a;
+    /* background-color: #02523a; */
     color: white;
     clear: both;
     background-image: linear-gradient(45deg, #02523a 40%, #4F6F52 60%);
 }
 
+/* Navigation Menu */
+#nav_menu {
+    padding-bottom: .5em;
+    margin: auto;
+    width: 100%;
+}
+
+#nav_menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+}
+
+#nav_menu ul li {
+    flex-basis: 33%;
+}
+
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    border-right: 2px solid rgb(255, 255, 255);
+}
+
+#nav_menu ul li a:hover {
+    background-color: #023c2b;
+}
+
+
+#nav_menu ul li a.lastitem {
+    border-right: none;
+}
+
+main {
+    clear: left
+}
+
+/*** Media Quieries ***/
+
+/* Puts everything to left after breakpoint */
+@media only screen and (max-width: 860px) {
+    #key-artists {
+        float: none;
+    }
+
+    #characteristics {
+        float: none;
+    }
+
+    section img {
+        float: none;
+        padding: .5em 0;
+    }
+
+    #credit {
+        float: none;
+    }
+
+}
+
+/* Makes nav menu vertical after breakpoint*/
+@media only screen and (max-width: 630px) {
+
+    #nav_menu ul {
+        flex-direction: column;
+    }
+
+    #nav_menu ul li a {
+        border-right: none;
+        border-bottom: 2px solid rgb(255, 255, 255);
+    }
+
+    #nav_menu ul li a.lastitem {
+        border-bottom: none;
+    }
+
+    #nav_menu {
+        padding-bottom: 0;
+    }
+
+
+}
