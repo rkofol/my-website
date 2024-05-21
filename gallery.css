@@ -20,75 +20,9 @@ body {
     background-color: #fffff9;
 }
 
-main em {
-    font-size: larger;
-}
 
-.artist,
-.character {
-    font-size: 115%;
-
-}
-
-/* Styling for Key Artists List */
-#key-artists {
-    border: 2px solid #02523a;
-    background-color: #e0e9c2;
-    float: left;
-    padding: .5em 3em 2em 3em;
-    width: 40%;
-}
-
-ul#key-artists {
-    list-style-image: url("images/brush.png");
-}
-
-/* Styling for Characteristics List */
-#characteristics {
-    border: 2px solid #02523a;
-    background-color: #e0e9c2;
-    float: left;
-    padding: .5em 3em 2em 3em;
-    width: 40%;
-    clear: left;
-
-}
-
-#credit {
-    float: right;
-    clear: right;
-}
-
-/* Images */
-section img {
-    float: right;
-    padding: 2em 0em .5em 0em;
-    width: 40%;
-    min-width: 300px;
-    clear: right;
-}
-
-
-/* Go back and use to fix artists pics */
-
-.portraits img {
-    padding: 2em 2em 0 2.5em;
-    width: 80%;
-    min-width: 200px;
-}
 
 br {
-    clear: both;
-}
-
-/* Styling for Artists Page */
-article {
-    column-count: 3;
-    column-gap: 35px;
-    column-rule: 2.25px solid #4F6F52;
-}
-
-.top {
     clear: both;
 }
 
@@ -146,28 +80,31 @@ main {
     clear: left
 }
 
-/*** Media Quieries ***/
 
-/* Puts everything to left after breakpoint */
-@media only screen and (max-width: 860px) {
-    #key-artists {
-        float: none;
-    }
-
-    #characteristics {
-        float: none;
-    }
-
-    section img {
-        float: none;
-        padding: .5em 0;
-    }
-
-    #credit {
-        float: none;
-    }
+/* Image layout */
+main {
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 16px;
+    grid-template-areas:
+        "one two three"
+        "four five six"
+        "sev eig nine";
 
 }
+
+img {
+    width: 95%;
+}
+
+img:hover {
+    width: 100%;
+}
+
+
+/*** Media Quieries ***/
 
 /* Makes nav menu vertical after breakpoint*/
 @media only screen and (max-width: 630px) {
@@ -190,4 +127,25 @@ main {
     }
 
 
+}
+
+
+/* Moves paintingings into one column */
+
+@media only screen and (max-width: 760px) {
+    main {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-areas:
+            "one"
+            "two"
+            "three"
+            "four"
+            "five"
+            "six"
+            "sev"
+            "eig"
+            "nine";
+
+    }
 }
