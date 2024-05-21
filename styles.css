@@ -24,7 +24,7 @@ main em {
     font-size: larger;
 }
 
-.artist,
+.list,
 .character {
     font-size: 115%;
 
@@ -36,7 +36,7 @@ main em {
     background-color: #e0e9c2;
     float: left;
     padding: .5em 3em 2em 3em;
-    width: 40%;
+    width: 45%;
 }
 
 ul#key-artists {
@@ -49,7 +49,7 @@ ul#key-artists {
     background-color: #e0e9c2;
     float: left;
     padding: .5em 3em 2em 3em;
-    width: 40%;
+    width: 45%;
     clear: left;
 
 }
@@ -69,24 +69,35 @@ section img {
 }
 
 
-/* Go back and use to fix artists pics */
-
-.portraits img {
-    padding: 2em 2em 0 2.5em;
-    width: 80%;
-    min-width: 200px;
-}
-
 br {
     clear: both;
 }
 
 /* Styling for Artists Page */
-article {
-    column-count: 3;
-    column-gap: 35px;
-    column-rule: 2.25px solid #4F6F52;
+
+div#sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
+
+.artist {
+    display: flex;
+    padding: 1em;
+    margin: 1em;
+}
+
+section.artist img {
+    padding:.5em;
+    min-width: 300px;
+    align-self: center;
+    width: 100%;
+}
+
+div.artist-desc {
+    margin: 0 2em;
+}
+
 
 .top {
     clear: both;
@@ -149,7 +160,7 @@ main {
 /*** Media Quieries ***/
 
 /* Puts everything to left after breakpoint */
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 940px) {
     #key-artists {
         float: none;
     }
@@ -161,6 +172,7 @@ main {
     section img {
         float: none;
         padding: .5em 0;
+        width: 59%;
     }
 
     #credit {
@@ -190,4 +202,24 @@ main {
     }
 
 
+}
+
+
+/* Makes artist cards vertical after breakpoint*/
+@media only screen and (max-width: 830px) {
+
+    div#sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .artist {
+        flex-direction: column;
+    }
+
+    section.artist img {
+        margin: 0;
+        align-self: center;
+        max-width: 400px;
+    }
 }
