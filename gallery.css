@@ -5,14 +5,14 @@
 /* Styling for Headers */
 h1,
 h2 {
-    font-variant: small-caps;
     color: var(--main-color);
 }
 
 
 /* Styling for Body */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
     font-size: 100%;
     padding: 1em;
     width: 80%;
@@ -20,7 +20,9 @@ body {
     background-color: #fffff9;
 }
 
-
+em {
+    font-size: 110%;
+}
 
 br {
     clear: both;
@@ -30,9 +32,9 @@ br {
 footer p {
     text-align: center;
     padding: 1em 0;
-    border-top: 2px solid #02523a;
-    border-bottom: 2px solid #02523a;
-    background-color: #02523a;
+    border-top: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    background-color: var(--main-color);
     color: white;
     clear: both;
 }
@@ -83,11 +85,10 @@ main {
 
 /* Image layout */
 main {
-    height: 800px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 16px;
+    grid-template-rows: repeat(3, .5fr);
+    grid-gap: 12px;
     grid-template-areas:
         "one two three"
         "four five six"
@@ -100,7 +101,7 @@ img {
 }
 
 img:hover {
-    width: 100%;
+    width: 98%;
 }
 
 
@@ -132,10 +133,10 @@ img:hover {
 
 /* Moves paintingings into one column */
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 850px) {
     main {
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(9, 1fr);
+        grid-template-rows: repeat(9, .5fr);
         grid-template-areas:
             "one"
             "two"

@@ -54,9 +54,10 @@ ul#key-artists {
 
 }
 
-#credit {
+#credit, #license {
     float: right;
     clear: right;
+    width: 40%;
 }
 
 /* Images */
@@ -67,7 +68,6 @@ section img {
     min-width: 300px;
     clear: right;
 }
-
 
 br {
     clear: both;
