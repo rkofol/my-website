@@ -1,0 +1,13 @@
+Brandon-
+
+"At around 400px wide and smaller the text on the Key Artists page starts to look a little narrow."
+
+I changed the padding and margin for .artist to be .5em instead of 1em in the media queiry for 845px. I also removed the margin for div.artist-desc in the same media quiery.
+
+
+
+Emily- 
+
+"On your homepage, you could add a few more media queries to allow your boxes to take up some more space as the width shrinks. This can help eliminate unused space to the right."
+
+I added a media quiery at 940px so that the Key Artists and Characteristics boxes would take up 80% of the page as the width got smaller.

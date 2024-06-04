@@ -5,14 +5,13 @@
 /* Styling for Headers */
 h1,
 h2 {
-    font-variant: small-caps;
     color: var(--main-color);
 }
 
-
 /* Styling for Body */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
     font-size: 100%;
     padding: 1em;
     width: 80%;
@@ -51,10 +50,10 @@ ul#key-artists {
     padding: .5em 3em 2em 3em;
     width: 45%;
     clear: left;
-
 }
 
-#credit, #license {
+#credit,
+#license {
     float: right;
     clear: right;
     width: 40%;
@@ -74,7 +73,6 @@ br {
 }
 
 /* Styling for Artists Page */
-
 div#sections {
     display: flex;
     flex-direction: row;
@@ -88,7 +86,7 @@ div#sections {
 }
 
 section.artist img {
-    padding:.5em;
+    padding: .5em;
     min-width: 300px;
     align-self: center;
     width: 100%;
@@ -98,9 +96,13 @@ div.artist-desc {
     margin: 0 2em;
 }
 
-
 .top {
     clear: both;
+}
+
+/* Styling for Tutorials Page */
+.videos {
+    padding: 1em;
 }
 
 /* Footer */
@@ -130,7 +132,7 @@ footer p {
 }
 
 #nav_menu ul li {
-    flex-basis: 33%;
+    flex-basis: 25%;
 }
 
 #nav_menu ul li a {
@@ -161,10 +163,8 @@ main {
 
 /* Puts everything to left after breakpoint */
 @media only screen and (max-width: 940px) {
-    #key-artists {
-        float: none;
-    }
 
+    #key-artists,
     #characteristics {
         float: none;
     }
@@ -172,13 +172,21 @@ main {
     section img {
         float: none;
         padding: .5em 0;
-        width: 59%;
+        width: 60%;
     }
 
-    #credit {
+    #credit,
+    #license {
         float: none;
+        width: 100%;
     }
 
+    #key-artists,
+    #characteristics {
+        width: 80%;
+        padding-left: 2.5em;
+        padding-right: 1.5em;
+    }
 }
 
 /* Makes nav menu vertical after breakpoint*/
@@ -201,12 +209,10 @@ main {
         padding-bottom: 0;
     }
 
-
 }
 
-
 /* Makes artist cards vertical after breakpoint*/
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 845px) {
 
     div#sections {
         flex-direction: column;
@@ -215,11 +221,42 @@ main {
 
     .artist {
         flex-direction: column;
+        padding: .5em;
+        margin: .5em;
     }
 
     section.artist img {
         margin: 0;
         align-self: center;
-        max-width: 400px;
+        max-width: 300px;
+    }
+
+    div.artist-desc {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .artist {
+        padding: 0;
+        margin: 0;
+    }
+
+    section.artist img {
+        margin: 0;
+        align-self: center;
+        min-width: 175;
+    }
+
+    #key-artists,
+    #characteristics {
+        padding-left: 2em;
+        padding-right: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    iframe {
+        width: 100%;
     }
 }

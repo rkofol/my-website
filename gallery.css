@@ -55,7 +55,7 @@ footer p {
 }
 
 #nav_menu ul li {
-    flex-basis: 33%;
+    flex-basis: 25%;
 }
 
 #nav_menu ul li a {
@@ -73,7 +73,6 @@ footer p {
     background-color: #023c2b;
 }
 
-
 #nav_menu ul li a.lastitem {
     border-right: none;
 }
@@ -81,7 +80,6 @@ footer p {
 main {
     clear: left
 }
-
 
 /* Image layout */
 main {
@@ -93,15 +91,14 @@ main {
         "one two three"
         "four five six"
         "sev eig nine";
-
 }
 
 img {
-    width: 95%;
+    width: 98%;
 }
 
 img:hover {
-    width: 98%;
+    width: 100%;
 }
 
 
@@ -129,7 +126,6 @@ img:hover {
 
 
 }
-
 
 /* Moves paintingings into one column */
 
