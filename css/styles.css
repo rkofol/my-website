@@ -2,6 +2,44 @@
     --main-color: #02523a;
 }
 
+/* Navigation Menu */
+#nav_menu {
+    padding-bottom: .5em;
+    margin: auto;
+    width: 100%;
+}
+
+#nav_menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+}
+
+#nav_menu ul li {
+    flex-basis: 25%;
+}
+
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    border-right: 2px solid rgb(255, 255, 255);
+}
+
+#nav_menu ul li a:hover {
+    background-color: #023c2b;
+}
+
+#nav_menu ul li a.lastitem {
+    border-right: none;
+}
+
 /* Styling for Headers */
 h1,
 h2 {
@@ -23,15 +61,17 @@ main em {
     font-size: larger;
 }
 
-.list,
-.character {
-    font-size: 115%;
-
+br {
+    clear: both;
 }
 
 /* Styling for Key Artists List */
+.list {
+    font-size: 115%;
+}
+
 #key-artists {
-    border: 2px solid #02523a;
+    border: 2px solid var(--main-color);
     background-color: #e0e9c2;
     float: left;
     padding: .5em 3em 2em 3em;
@@ -39,12 +79,13 @@ main em {
 }
 
 ul#key-artists {
-    list-style-image: url("images/brush.png");
+    list-style-image: url("../images/brush.png");
 }
 
-/* Styling for Characteristics List */
-#characteristics {
-    border: 2px solid #02523a;
+/* Styling for Characteristics and Influences Lists */
+#characteristics,
+#influence {
+    border: 2px solid var(--main-color);
     background-color: #e0e9c2;
     float: left;
     padding: .5em 3em 2em 3em;
@@ -52,6 +93,7 @@ ul#key-artists {
     clear: left;
 }
 
+/* Front page img and credit*/
 #credit,
 #license {
     float: right;
@@ -59,7 +101,6 @@ ul#key-artists {
     width: 40%;
 }
 
-/* Images */
 section img {
     float: right;
     padding: 2em 0em .5em 0em;
@@ -68,11 +109,7 @@ section img {
     clear: right;
 }
 
-br {
-    clear: both;
-}
-
-/* Styling for Artists Page */
+/* Styling for Key Artists Page */
 div#sections {
     display: flex;
     flex-direction: row;
@@ -109,63 +146,21 @@ div.artist-desc {
 footer p {
     text-align: center;
     padding: 1em 0;
-    border-top: 2px solid #02523a;
-    border-bottom: 2px solid #02523a;
-    background-color: #02523a;
-    color: white;
-    clear: both;
-}
-
-/* Navigation Menu */
-#nav_menu {
-    padding-bottom: .5em;
-    margin: auto;
-    width: 100%;
-}
-
-#nav_menu ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    margin: auto;
-    padding: 0;
-}
-
-#nav_menu ul li {
-    flex-basis: 25%;
-}
-
-#nav_menu ul li a {
-    text-align: center;
-    display: block;
-    padding: 1em 0;
-    text-decoration: none;
+    border-top: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
     background-color: var(--main-color);
     color: white;
-    font-weight: bold;
-    border-right: 2px solid rgb(255, 255, 255);
-}
-
-#nav_menu ul li a:hover {
-    background-color: #023c2b;
-}
-
-
-#nav_menu ul li a.lastitem {
-    border-right: none;
-}
-
-main {
-    clear: left
+    clear: both;
 }
 
 /*** Media Quieries ***/
 
 /* Puts everything to left after breakpoint */
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 970px) {
 
     #key-artists,
-    #characteristics {
+    #characteristics,
+    #influence {
         float: none;
     }
 
@@ -182,7 +177,8 @@ main {
     }
 
     #key-artists,
-    #characteristics {
+    #characteristics,
+    #influence {
         width: 80%;
         padding-left: 2.5em;
         padding-right: 1.5em;
@@ -191,7 +187,6 @@ main {
 
 /* Makes nav menu vertical after breakpoint*/
 @media only screen and (max-width: 630px) {
-
     #nav_menu ul {
         flex-direction: column;
     }
@@ -208,12 +203,10 @@ main {
     #nav_menu {
         padding-bottom: 0;
     }
-
 }
 
 /* Makes artist cards vertical after breakpoint*/
-@media only screen and (max-width: 845px) {
-
+@media only screen and (max-width: 890px) {
     div#sections {
         flex-direction: column;
         align-items: center;
@@ -249,7 +242,8 @@ main {
     }
 
     #key-artists,
-    #characteristics {
+    #characteristics,
+    #influence {
         padding-left: 2em;
         padding-right: 1.5em;
     }
@@ -258,7 +252,5 @@ main {
 @media only screen and (max-width: 700px) {
     iframe {
         width: 100%;
-        height: auto;
     }
-
 }

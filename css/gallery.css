@@ -28,17 +28,6 @@ br {
     clear: both;
 }
 
-/* Footer */
-footer p {
-    text-align: center;
-    padding: 1em 0;
-    border-top: 2px solid var(--main-color);
-    border-bottom: 2px solid var(--main-color);
-    background-color: var(--main-color);
-    color: white;
-    clear: both;
-}
-
 /* Navigation Menu */
 #nav_menu {
     padding-bottom: .5em;
@@ -101,6 +90,16 @@ img:hover {
     width: 100%;
 }
 
+/* Footer */
+footer p {
+    text-align: center;
+    padding: 1em 0;
+    border-top: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    background-color: var(--main-color);
+    color: white;
+    clear: both;
+}
 
 /*** Media Quieries ***/
 
@@ -123,12 +122,9 @@ img:hover {
     #nav_menu {
         padding-bottom: 0;
     }
-
-
 }
 
-/* Moves paintingings into one column */
-
+/* Moves paintings into one column */
 @media only screen and (max-width: 850px) {
     main {
         grid-template-columns: repeat(1, 1fr);
@@ -143,6 +139,5 @@ img:hover {
             "sev"
             "eig"
             "nine";
-
     }
 }
